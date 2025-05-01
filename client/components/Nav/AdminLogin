@@ -1,0 +1,91 @@
+// import React, { useState } from 'react'
+// import { useNavigate } from 'react-router-dom'
+// import request from 'superagent'
+
+// function AdminLogin() {
+//   const [details, setDetails] = useState({ username: '', password: '' })
+//   const navigate = useNavigate()
+//   const updateDetails = (e) => {
+//     setDetails({ ...details, [e.target.name]: e.target.value })
+//   }
+//   const submitHandler = (e) => {
+//     e.preventDefault()
+//     console.log(details)
+//     const { username, password } = details
+//     if (username === 'manasa' && password === 'admin') {
+//       alert('Login Successful')
+//       navigate('/dashboard')
+//     } else {
+//       alert('Invalid Credentials')
+//     }
+//   }
+//   // const { username, password } = details
+//   // const usernameError = document.getElementById('usernameError')
+//   // const passwordError = document.getElementById('passwordError')
+//   // // const alphaExp = /^[a-za-z\s]+$/
+//   // // const numExp = /^[0-9]+$/
+//   // const exp = /^[0-9a-za-z\s]+$/
+//   // const {username, password} = details;
+//   const usernameStatus = false
+//   const passwordStatus = false
+
+//   //username Validation
+//   // if (username === '') {
+//   //   usernameError.textContent = 'username is Mandatory'
+//   // } else {
+//   //   if (username.match(exp)) {
+//   //     usernameError.textContent = ''
+//   //     usernameStatus = true
+//   //   } else {
+//   //     usernameError.textContent = 'username can contain alphabets and numbers'
+//   //   }
+//   // }
+
+//   // Password Validation
+//   // if (password === '') {
+//   //   passwordError.textContent = 'password is Mandatory'
+//   // } else {
+//   //   if (password.match(exp)) {
+//   //     passwordError.textContent = ''
+//   //     passwordStatus = true
+//   //   } else {
+//   //     passwordError.textContent = 'password can contain alphabets and numbers'
+//   //   }
+//   // }
+
+//   //Submitting into API
+//   if (usernameStatus && passwordStatus) {
+//     // API Call
+//     request
+//       .post(`http://localhost:5001`, login)
+//       .then(() => alert('Your Are Logged In'))
+//       .catch((error) => console.error(error))
+//   }
+
+//   return (
+//     <div className="container p-5">
+//       <div className="col-lg-6 mx-auto shadow p-5">
+//         <h2 className="text-center mb-4">Admin Login</h2>
+//         <form onSubmit={submitHandler}>
+//           <input
+//             type="text"
+//             onChange={updateDetails}
+//             placeholder="Username"
+//             name="username"
+//             className="form-control mb-3"
+//           />
+//           <input
+//             type="password"
+//             onChange={updateDetails}
+//             placeholder="Password"
+//             name="password"
+//             className="form-control mb-3"
+//           />
+//           <input type="submit" className="form-control mb-3" />
+//         </form>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default AdminLogin

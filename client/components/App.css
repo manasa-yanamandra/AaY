@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Puts maximum space between items */
+  align-items: center; /* Vertically aligns items in the center */
+  padding: 1rem 2rem; /* Add some padding */
+  /* Add other navigation bar styles as needed */
+}
+
+.nav-links {
+  display: flex; /* If you have other links, this will arrange them horizontally */
+  gap: 1rem; /* Optional: Add spacing between links */
+}
